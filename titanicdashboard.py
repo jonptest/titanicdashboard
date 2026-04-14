@@ -43,8 +43,8 @@ with col3:
 
 st.divider()
 
-row2_col1, row2_col2
-with row2col1:
+row2_col1, row2_col2 = st.columns(2)
+with row2_col1:
     st.subheader("Survival Count by Gender")
     fig_sex = px.histogram(
         filtered_df,
@@ -55,7 +55,7 @@ with row2col1:
     )
     st.plotly_chart(fig_sex, use_container_width = True, config = {'displaylogo' : False})
 
-with row2col2:
+with row2_col2:
     st.subheader("Age Distribution")
     fig_age = px.histogram(filtered_df, x="Age", nbins = 30)
     st.plotly_chart(fig_age, use_container_width = True, config = {'staticPlot' : False})
