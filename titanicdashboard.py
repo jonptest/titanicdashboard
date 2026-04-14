@@ -29,7 +29,7 @@ class_filter = st.sidebar.multiselect(
     default = df['Pclass'].unique() 
 )
 
-filter_df = df[(df['Sex'].isin(gender_filter)) & (df['Pclass'].isin(class_filter))]
+filtered_df = df[(df['Sex'].isin(gender_filter)) & (df['Pclass'].isin(class_filter))]
 
 col1, col2, col3 = st.columns(3)
 with col1:
